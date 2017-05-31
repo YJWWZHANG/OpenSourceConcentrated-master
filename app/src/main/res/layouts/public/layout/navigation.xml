@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.design.widget.NavigationView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_view"
+    android:layout_width="320dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="@android:color/transparent"
+    app:headerLayout="@layout/navigation_header"
+    app:itemIconTint="@color/material_white"
+    app:itemTextColor="@color/material_white"
+    app:menu="@menu/menu_navigation">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:background="#00000000"
+            android:drawableStart="@drawable/ic_settings_white_24dp"
+            android:text="@string/settings"
+            android:textAllCaps="false"
+            android:textColor="@color/material_white"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:background="#00000000"
+            android:drawableStart="@drawable/ic_exit_to_app_white_24dp"
+            android:text="@string/quit"
+            android:textAllCaps="false"
+            android:textColor="@color/material_white"/>
+    </RelativeLayout>
+</android.support.design.widget.NavigationView>

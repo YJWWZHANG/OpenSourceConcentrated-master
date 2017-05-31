@@ -1,0 +1,64 @@
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:sdv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground"
+
+    card_view:cardBackgroundColor="@color/material_white95"
+
+    card_view:cardCornerRadius="5dp"
+    card_view:cardPreventCornerOverlap="true"
+    card_view:cardUseCompatPadding="true"
+
+    card_view:contentPadding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/news_item2_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="品鉴喁喁喁喁喁喁喁喁蛙鸣蝉噪喁喁品鉴喁喁喁喁喁喁喁喁蛙鸣蝉噪喁喁"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdv_imgsrc1"
+                style="@style/news_item2_image"
+                android:layout_alignParentLeft="true"
+                sdv:backgroundImage="@drawable/news_image_loading"
+                sdv:progressBarImage="@drawable/news_image_loading"
+                sdv:progressBarImageScaleType="centerCrop"
+                />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdv_imgsrc2"
+                style="@style/news_item2_image"
+                android:layout_centerInParent="true"
+                sdv:backgroundImage="@drawable/news_image_loading"
+                sdv:progressBarImage="@drawable/news_image_loading"
+                sdv:progressBarImageScaleType="centerCrop"
+                />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdv_imgsrc3"
+                style="@style/news_item2_image"
+                android:layout_alignParentRight="true"
+                sdv:backgroundImage="@drawable/news_image_loading"
+                sdv:progressBarImage="@drawable/news_image_loading"
+                sdv:progressBarImageScaleType="centerCrop"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

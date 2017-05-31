@@ -1,0 +1,18 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="spacing_large">16dp</dimen>
+
+    //mdpi 320*480
+    //hdpi 480*800
+    //xdpi 720*1280
+    //xxdpi 1080*1920
+    //xxxdpi 1080+
+
+    <dimen name="news_item1_image_width">86dp</dimen>
+    <dimen name="news_item1_image_height">60dp</dimen>
+
+    <dimen name="fab_margin">16dp</dimen>
+</resources>
+

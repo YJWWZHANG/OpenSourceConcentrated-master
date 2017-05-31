@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="weather"
+            type="com.zqb.concentrated.weather.bean.CityCountyListBean.Item"/>
+        <variable
+            name="YesterdayTemp"
+            type="com.zqb.concentrated.weather.bean.WeatherFutureBean.DataBean.YesterdayBean"/>
+    </data>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimaryDark">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/AppTheme.AppBarOverlay">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/colorPrimary"
+                    app:title="天气"
+                    app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+            </android.support.design.widget.AppBarLayout>
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/material_yellow_200"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"/>
+
+                    <include layout="@layout/card_temp"
+                        app:weather="@{weather}"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"/>
+
+                    <include layout="@layout/card_yesterday_temp"
+                        app:YesterdayTemp="@{YesterdayTemp}"/>
+                    <include layout="@layout/card_future_temp"/>
+                    <include layout="@layout/card_future_temp"/>
+                    <include layout="@layout/card_future_temp"/>
+                    <include layout="@layout/card_future_temp"/>
+                    <include layout="@layout/card_future_temp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"/>
+
+                    <include layout="@layout/card_exponent"/>
+                    <include layout="@layout/card_exponent"/>
+                    <include layout="@layout/card_exponent"/>
+                    <include layout="@layout/card_exponent"/>
+                    <include layout="@layout/card_exponent"/>
+                    <include layout="@layout/card_exponent"/>
+                    <include layout="@layout/card_exponent"/>
+                    <include layout="@layout/card_exponent"/>
+                    <include layout="@layout/card_exponent"/>
+                    <include layout="@layout/card_exponent"/>
+                    <include layout="@layout/card_exponent"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"/>
+
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+
+        </android.support.design.widget.CoordinatorLayout>
+
+        <include layout="@layout/navigation"/>
+
+    </android.support.v4.widget.DrawerLayout>
+
+</layout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/list"
+        android:checkableBehavior="all">
+        <item android:id="@+id/action_news"
+            android:icon="@drawable/ic_message_white_48dp"
+            android:title="@string/news"/>
+        <item android:id="@+id/action_book"
+            android:icon="@drawable/ic_book_white_48dp"
+            android:title="@string/book"/>
+        <item android:id="@+id/action_video"
+            android:icon="@drawable/ic_ondemand_video_white_48dp"
+            android:title="@string/video"/>
+        <item android:id="@+id/action_live_tv"
+            android:icon="@drawable/ic_live_tv_white_48dp"
+            android:title="@string/live_tv"/>
+        <item android:id="@+id/action_music"
+            android:icon="@drawable/ic_music_note_white_48dp"
+            android:title="@string/music"/>
+        <item android:id="@+id/action_photo"
+            android:icon="@drawable/ic_photo_white_48dp"
+            android:title="@string/photo"/>
+        <item android:id="@+id/action_weather"
+            android:icon="@drawable/ic_wb_sunny_white_48dp"
+            android:title="@string/weather"/>
+    </group>
+
+    <group
+        android:id="@+id/other"
+        android:checkableBehavior="none">
+        <item android:id="@+id/a"
+              android:icon="@drawable/ic_markunread_mailbox_white_48dp"
+              android:title="@string/tools"/>
+        <item android:id="@+id/b"
+              android:icon="@drawable/ic_android_white_48dp"
+              android:title="@string/about"/>
+
+    </group>
+
+
+    <!--<item android:title="更多">-->
+        <!--<menu>-->
+            <!--<item android:id="@+id/action_share"-->
+                <!--android:icon="@mipmap/ic_share_white_48dp"-->
+                <!--android:title="分享"/>-->
+            <!--<item android:id="@+id/action_feedback"-->
+                <!--android:icon="@mipmap/ic_feedback_white_48dp"-->
+                <!--android:title="意见反馈"/>-->
+        <!--</menu>-->
+    <!--</item>-->
+</menu>

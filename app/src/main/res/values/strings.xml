@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">开源秘集</string>
+
+    <!--menu/menu_navigation.xml-->
+    <string name="news">新闻资讯</string>
+    <string name="book">精选文章</string>
+    <string name="video">视频观看</string>
+    <string name="live_tv">在线直播</string>
+    <string name="music">音乐轻听</string>
+    <string name="photo">图片搜索</string>
+    <string name="weather">天气预报</string>
+    <string name="tools">工具</string>
+    <string name="about">关于</string>
+
+    <!--layout/news_detail_activity.xml-->
+    <string name="news_detail">新闻详情</string>
+    <string name="text_size">字体大小</string>
+    <string name="browser_open">浏览器打开</string>
+    <string name="share">分享</string>
+
+    <!--menu/menu_weather.xml-->
+    <string name="switch_area">切换城市</string>
+    <string name="temp_symbol">℃</string>
+
+    <string name="settings">设置</string>
+    <string name="quit">退出</string>
+
+    <string name="navigation_drawer_open">open</string>
+    <string name="navigation_drawer_close">close</string>
+
+    <string-array name="news_channel">
+        <!--定死不能更改的三个频道-->
+        <item>头条</item>
+        <item>体育</item>
+        <item>科技</item>
+
+        <item>军事</item>
+        <item>财经</item>
+        <item>北京</item>
+        <item>房产</item>
+        <item>足球</item>
+        <item>娱乐</item>
+        <item>电影</item>
+        <item>汽车</item>
+        <item>笑话</item>
+        <item>游戏</item>
+        <item>时尚</item>
+        <item>情感</item>
+        <item>精选</item>
+        <item>电台</item>
+        <item>NBA</item>
+        <item>数码</item>
+        <item>移动</item>
+        <item>彩票</item>
+        <item>教育</item>
+        <item>论坛</item>
+        <item>旅游</item>
+        <item>手机</item>
+        <item>博客</item>
+        <item>社会</item>
+        <item>家居</item>
+        <item>暴雪</item>
+        <item>亲子</item>
+        <item>CBA</item>
+        <item>消息</item>
+    </string-array>
+</resources>
