@@ -10,10 +10,10 @@
         <item android:id="@+id/action_book"
             android:icon="@drawable/ic_book_white_48dp"
             android:title="@string/book"/>
-        <item android:id="@+id/action_video"
+        <item android:id="@+id/action_caricature"
             android:icon="@drawable/ic_ondemand_video_white_48dp"
             android:title="@string/video"/>
-        <item android:id="@+id/action_live_tv"
+        <item android:id="@+id/action_video_tv"
             android:icon="@drawable/ic_live_tv_white_48dp"
             android:title="@string/live_tv"/>
         <item android:id="@+id/action_music"

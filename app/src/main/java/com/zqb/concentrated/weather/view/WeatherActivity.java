@@ -201,9 +201,9 @@ public class WeatherActivity extends AppCompatActivity implements NavigationView
                 break;
             case R.id.action_book:
                 break;
-            case R.id.action_video:
+            case R.id.action_caricature:
                 break;
-            case R.id.action_live_tv:
+            case R.id.action_video_tv:
                 break;
             case R.id.action_music:
                 break;

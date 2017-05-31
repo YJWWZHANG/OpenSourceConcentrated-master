@@ -90,8 +90,9 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:name=".news.view.BaseNewsActivity">
-        </activity>
+        <activity
+            android:name=".caricature.ui.CariActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

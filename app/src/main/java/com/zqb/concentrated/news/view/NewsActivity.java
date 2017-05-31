@@ -21,8 +21,8 @@ import android.view.View;
 
 import com.jude.beam.bijection.RequiresPresenter;
 import com.jude.beam.expansion.BeamBaseActivity;
-import com.nineoldandroids.view.ViewHelper;
 import com.zqb.concentrated.R;
+import com.zqb.concentrated.caricature.ui.CariActivity;
 import com.zqb.concentrated.news.presenter.NewsActivityPresenter;
 import com.zqb.concentrated.news.adapter.NewsFragmentPagerAdapter;
 import com.zqb.concentrated.weather.view.WeatherActivity;
@@ -127,9 +127,10 @@ public class NewsActivity extends BeamBaseActivity<NewsActivityPresenter> implem
                 break;
             case R.id.action_book:
                 break;
-            case R.id.action_video:
+            case R.id.action_caricature:
+                CariActivity.Companion.launch(this);
                 break;
-            case R.id.action_live_tv:
+            case R.id.action_video_tv:
                 break;
             case R.id.action_music:
                 break;

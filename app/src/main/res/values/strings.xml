@@ -4,8 +4,8 @@
     <!--menu/menu_navigation.xml-->
     <string name="news">新闻资讯</string>
     <string name="book">精选文章</string>
-    <string name="video">视频观看</string>
-    <string name="live_tv">在线直播</string>
+    <string name="video">漫画天地</string>
+    <string name="live_tv">视频直播</string>
     <string name="music">音乐轻听</string>
     <string name="photo">图片搜索</string>
     <string name="weather">天气预报</string>
