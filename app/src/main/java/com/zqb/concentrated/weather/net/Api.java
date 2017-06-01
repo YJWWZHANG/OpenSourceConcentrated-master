@@ -2,11 +2,9 @@ package com.zqb.concentrated.weather.net;
 
 import com.zqb.concentrated.weather.bean.CityCountyListBean;
 import com.zqb.concentrated.weather.bean.ProvinceListBean;
-import com.zqb.concentrated.weather.bean.WeatherFutureBean;
 
 import retrofit2.http.GET;
 import retrofit2.http.Path;
-import retrofit2.http.Query;
 import rx.Observable;
 
 /**
@@ -24,9 +22,4 @@ public interface Api {
     @GET("http://flash.weather.com.cn/wmaps/xml/{area}.xml")
     Observable<CityCountyListBean> loadCityList(@Path("area") String area);
 
-    /**
-     * http://wthrcdn.etouch.cn/weather_mini?citykey=101010100
-     */
-    @GET("http://wthrcdn.etouch.cn/weather_mini")
-    Observable<WeatherFutureBean> loadWeatherFuture(@Query("citykey") String citykey);
 }

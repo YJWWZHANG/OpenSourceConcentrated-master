@@ -17,14 +17,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.nineoldandroids.view.ViewHelper;
 import com.orhanobut.logger.Logger;
 import com.zqb.concentrated.R;
+import com.zqb.concentrated.caricature.ui.CariActivity;
 import com.zqb.concentrated.databinding.ActivityWeatherBinding;
 import com.zqb.concentrated.news.view.NewsActivity;
 import com.zqb.concentrated.weather.bean.AreaBean;
 import com.zqb.concentrated.weather.bean.CityCountyListBean;
-import com.zqb.concentrated.weather.bean.WeatherFutureBean;
 import com.zqb.concentrated.weather.presenter.WeatherPresenter;
 
 import org.greenrobot.eventbus.EventBus;
@@ -93,10 +92,16 @@ public class WeatherActivity extends AppCompatActivity implements NavigationView
         EventBus.getDefault().unregister(this);
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+
     private void initView() {
 
         setSupportActionBar(mToolbar);
-        mToolbar.setTitle("广州市");
+        mToolbar.setTitle("龙川县");
 //        getSupportActionBar().setHomeAsUpIndicator(R.mipmap.back);
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 //        getSupportActionBar().setDisplayShowTitleEnabled(false);
@@ -112,15 +117,14 @@ public class WeatherActivity extends AppCompatActivity implements NavigationView
 
     private void initData() {
         mWeatherPresenter = new WeatherPresenter();
-        mWeatherPresenter.getWeather("guangzhou", "广州市");
-        mWeatherPresenter.getWeatherFuture("101010100");
+        mWeatherPresenter.getWeather("heyuan", "龙川县");
     }
 
     private void initEvent() {
         mDrawerLayout.addDrawerListener(new DrawerLayout.DrawerListener() {
             @Override
             public void onDrawerSlide(View drawerView, float slideOffset) {
-                ViewHelper.setTranslationX(mDrawerLayout.getChildAt(0), drawerView.getWidth() * slideOffset);
+                mDrawerLayout.getChildAt(0).setTranslationX(drawerView.getWidth() * slideOffset);
             }
 
             @Override
@@ -171,7 +175,6 @@ public class WeatherActivity extends AppCompatActivity implements NavigationView
         Logger.d(areaBean);
         mToolbar.setTitle(areaBean.getName());
         mWeatherPresenter.getWeather(areaBean.getName());
-        mWeatherPresenter.getWeatherFuture(areaBean.getPyNameOrCode());
     }
 
     /**
@@ -183,16 +186,6 @@ public class WeatherActivity extends AppCompatActivity implements NavigationView
         mDataBinding.setWeather(item);
     }
 
-    /**
-     * 网络请求返回数据
-     * */
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onWeatherFutureEvent(WeatherFutureBean weatherFutureBean){
-        Logger.d(weatherFutureBean.toString());
-        mDataBinding.setYesterdayTemp(weatherFutureBean.getData().getYesterday());
-//        mDataBinding.setWeatherYesterday(weatherFutureBean.getData().getYesterday());
-    }
-
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
@@ -202,6 +195,7 @@ public class WeatherActivity extends AppCompatActivity implements NavigationView
             case R.id.action_book:
                 break;
             case R.id.action_caricature:
+                CariActivity.Companion.launch(this);
                 break;
             case R.id.action_video_tv:
                 break;

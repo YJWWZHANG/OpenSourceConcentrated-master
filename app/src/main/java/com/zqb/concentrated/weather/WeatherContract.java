@@ -11,6 +11,5 @@ public interface WeatherContract {
     interface Presenter extends BasePresenter{
         void getWeather(String countyName);
         void getWeather(String cityName, String countyName);
-        void getWeatherFuture(String weatherCode);
     }
 }

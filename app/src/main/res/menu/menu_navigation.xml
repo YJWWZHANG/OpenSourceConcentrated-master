@@ -12,10 +12,10 @@
             android:title="@string/book"/>
         <item android:id="@+id/action_caricature"
             android:icon="@drawable/ic_ondemand_video_white_48dp"
-            android:title="@string/video"/>
+            android:title="@string/caricature"/>
         <item android:id="@+id/action_video_tv"
             android:icon="@drawable/ic_live_tv_white_48dp"
-            android:title="@string/live_tv"/>
+            android:title="@string/video_tv"/>
         <item android:id="@+id/action_music"
             android:icon="@drawable/ic_music_note_white_48dp"
             android:title="@string/music"/>

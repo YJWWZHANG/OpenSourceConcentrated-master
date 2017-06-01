@@ -81,7 +81,6 @@ public class NewsFragmentPresenter extends BeamBasePresenter<NewsFragment> {
                 .subscribe(new Subscriber<Map<String, List<NewsItem>>>() {
                     @Override
                     public void onCompleted() {
-                        Toast.makeText(App.getContext(), "更多加载完成", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override

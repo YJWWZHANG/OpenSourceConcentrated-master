@@ -7,9 +7,6 @@
         <variable
             name="weather"
             type="com.zqb.concentrated.weather.bean.CityCountyListBean.Item"/>
-        <variable
-            name="YesterdayTemp"
-            type="com.zqb.concentrated.weather.bean.WeatherFutureBean.DataBean.YesterdayBean"/>
     </data>
 
     <android.support.v4.widget.DrawerLayout
@@ -57,42 +54,7 @@
                     <include layout="@layout/card_temp"
                         app:weather="@{weather}"/>
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"/>
-
-                    <include layout="@layout/card_yesterday_temp"
-                        app:YesterdayTemp="@{YesterdayTemp}"/>
-                    <include layout="@layout/card_future_temp"/>
-                    <include layout="@layout/card_future_temp"/>
-                    <include layout="@layout/card_future_temp"/>
-                    <include layout="@layout/card_future_temp"/>
-                    <include layout="@layout/card_future_temp"/>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"/>
-
-                    <include layout="@layout/card_exponent"/>
-                    <include layout="@layout/card_exponent"/>
-                    <include layout="@layout/card_exponent"/>
-                    <include layout="@layout/card_exponent"/>
-                    <include layout="@layout/card_exponent"/>
-                    <include layout="@layout/card_exponent"/>
-                    <include layout="@layout/card_exponent"/>
-                    <include layout="@layout/card_exponent"/>
-                    <include layout="@layout/card_exponent"/>
-                    <include layout="@layout/card_exponent"/>
-                    <include layout="@layout/card_exponent"/>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"/>
-
-                </LinearLayout>
+                 </LinearLayout>
             </android.support.v4.widget.NestedScrollView>
 
         </android.support.design.widget.CoordinatorLayout>

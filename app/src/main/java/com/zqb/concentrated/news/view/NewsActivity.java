@@ -74,6 +74,13 @@ public class NewsActivity extends BeamBaseActivity<NewsActivityPresenter> implem
     }
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+
+
+    @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
@@ -145,8 +152,4 @@ public class NewsActivity extends BeamBaseActivity<NewsActivityPresenter> implem
         return true;
     }
 
-    @OnClick(R.id.fab_to_top)
-    public void onClick() {
-
-    }
 }

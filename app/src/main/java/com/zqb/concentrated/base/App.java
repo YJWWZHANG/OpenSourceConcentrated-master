@@ -4,11 +4,9 @@ import android.app.Application;
 
 import com.blankj.utilcode.utils.Utils;
 import com.facebook.drawee.backends.pipeline.Fresco;
-import com.google.common.html.HtmlEscapers;
 import com.jude.utils.JUtils;
 import com.orhanobut.logger.LogLevel;
 import com.orhanobut.logger.Logger;
-import com.squareup.leakcanary.LeakCanary;
 import com.zqb.concentrated.R;
 import com.zqb.concentrated.weather.bean.DaoMaster;
 import com.zqb.concentrated.weather.bean.DaoSession;
@@ -49,10 +47,10 @@ public class App extends Application {
         Database db = ENCRYPTED ? helper.getEncryptedReadableDb("super-secret") : helper.getReadableDb();
         mDaoSession = new DaoMaster(db).newSession();
 
-        if (LeakCanary.isInAnalyzerProcess(this)) {
-            return;
-        }
-        LeakCanary.install(this);
+//        if (LeakCanary.isInAnalyzerProcess(this)) {
+//            return;
+//        }
+//        LeakCanary.install(this);
     }
 
     public static App getContext() {
